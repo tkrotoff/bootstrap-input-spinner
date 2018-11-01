@@ -6,13 +6,13 @@
 //
 // Note: [Can I use a :before or :after pseudo-element on an input field?](https://stackoverflow.com/q/2587669)
 
+$spinner-size: 20px;
+
 @keyframes spinner {
   to {
     transform: rotate(360deg);
   }
 }
-
-$spinner-size: 20px;
 
 %spinner {
   width: $spinner-size;
@@ -26,6 +26,9 @@ $spinner-size: 20px;
   animation: spinner 0.6s linear infinite;
 }
 
+// See https://github.com/postcss/autoprefixer/issues/1153
+$input-height-without-calc-for-ie: str-replace($input-height, 'calc');
+
 // For <Input>
 input.is-pending {
   padding-right: calc(#{$spinner-size} - #{$input-border-width} * 2 + #{$input-padding-x});
@@ -33,7 +36,7 @@ input.is-pending {
   ~ .input-state {
     float: right;
     margin-right: calc(#{$spinner-size} + #{$input-padding-x} / 2);
-    margin-top: calc((#{$input-height} + #{$spinner-size}) / -2);
+    margin-top: calc((#{$input-height-without-calc-for-ie} + #{$spinner-size}) / -2);
 
     &::before {
       // Cannot use "content: '\a0\a0\a0\a0'" and remove spinner's width, height, "position: absolute" attributes
