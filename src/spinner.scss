@@ -6,7 +6,7 @@
 //
 // Note: [Can I use a :before or :after pseudo-element on an input field?](https://stackoverflow.com/q/2587669)
 
-$spinner-size: 20px;
+$spinner-size: 20px !default;
 
 @keyframes spinner {
   to {
