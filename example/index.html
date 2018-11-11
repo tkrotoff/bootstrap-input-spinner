@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>bootstrap-spinner</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <h1>bootstrap-spinner</h1>
+
+      <p>
+        Example taken from
+        <a href="https://getbootstrap.com/docs/4.1/components/forms/#overview">
+          Bootstrap Forms Overview
+        </a>
+      </p>
+
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control is-pending"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+          <span class="spinner"></span>
+          <small id="emailHelp" class="form-text text-muted">
+            We'll never share your email with anyone else.
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <button type="submit" class="btn btn-primary btn-spinner">
+          <span class="spinner"></span>
+          Submit
+        </button>
+
+        <br />
+        <br />
+
+        <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+
+        <button type="submit" class="btn btn-lg btn-primary btn-spinner">
+          <span class="spinner"></span>
+          Submit
+        </button>
+
+        <br />
+        <br />
+
+        <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+
+        <button type="submit" class="btn btn-sm btn-primary btn-spinner">
+          <span class="spinner"></span>
+          Submit
+        </button>
+
+        <br />
+        <br />
+
+        <button type="submit">Submit</button>
+
+        <button type="submit" class="btn-spinner">
+          <span class="spinner"></span>
+          Submit
+        </button>
+
+        <br />
+        <br />
+      </form>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

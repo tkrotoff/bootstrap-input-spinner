@@ -1,0 +1,9 @@
+.git/
+.cache/
+dist/
+.gitignore
+.prettierignore
+.browserslistrc
+LICENSE
+*.gif
+yarn.lock

@@ -33,7 +33,7 @@ $input-height-without-calc-for-ie: str-replace($input-height, 'calc');
 input.is-pending {
   padding-right: calc(#{$spinner-size} - #{$input-border-width} * 2 + #{$input-padding-x});
 
-  ~ .input-state {
+  ~ .spinner {
     float: right;
     margin-right: calc(#{$spinner-size} + #{$input-padding-x} / 2);
     margin-top: calc((#{$input-height-without-calc-for-ie} + #{$spinner-size}) / -2);
@@ -54,19 +54,28 @@ input.is-pending {
 }
 
 // For <button>
-.spinner {
-  @extend %spinner;
-  display: inline-block;
+.btn-spinner {
+  display: inline-flex;
+  align-items: center;
 
-  // See https://github.com/FortAwesome/Font-Awesome/blob/5.4.2/web-fonts-with-css/scss/_mixins.scss#L12
-  vertical-align: -0.125em;
-}
+  span.spinner {
+    @extend %spinner;
 
-// See https://github.com/twbs/bootstrap/blob/v4.1.3/scss/_buttons.scss#L62
-@each $color, $value in $theme-colors {
-  .spinner-#{$color} {
-    // See https://github.com/twbs/bootstrap/blob/v4.1.3/scss/mixins/_buttons.scss#L7
-    border-color: color-yiq($value);
-    border-top-color: $value;
+    // FIXME Needed by IE10, IE11 is OK
+    display: inline-block;
+
+    // Space between the spinner and the button text
+    margin-right: 0.5ch;
+  }
+
+  // See https://github.com/twbs/bootstrap/blob/v4.1.3/scss/_buttons.scss#L62
+  @each $color, $value in $theme-colors {
+    &.btn-#{$color} {
+      span.spinner {
+        // See https://github.com/twbs/bootstrap/blob/v4.1.3/scss/mixins/_buttons.scss#L7
+        border-color: color-yiq($value);
+        border-top-color: $value;
+      }
+    }
   }
 }
