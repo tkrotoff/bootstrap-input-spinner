@@ -1,5 +1,42 @@
 # bootstrap-spinner
 
+⚠️ This code is kind of "obsolete" now since Bootstrap >= 4.2 includes spinners: https://getbootstrap.com/docs/4.2/components/spinners/
+
+Example of a Bootstrap >= 4.2 spinner inside an `<input>`:
+
+```HTML
+<input class="form-control is-pending is-pending-sm">
+<span class="spinner-border spinner-border-sm"></span>
+
+<input class="form-control is-pending">
+<span class="spinner-border"></span>
+```
+
+```SCSS
+// Fix for IE, see https://github.com/postcss/autoprefixer/issues/1153
+$input-height-without-calc-for-ie: str-replace($input-height, 'calc');
+
+input.is-pending {
+  padding-right: calc(#{$spinner-width} - #{$input-border-width} * 2 + #{$input-padding-x});
+
+  &.is-pending-sm {
+    padding-right: calc(#{$spinner-width-sm} - #{$input-border-width} * 2 + #{$input-padding-x});
+  }
+
+  + .spinner-border {
+    float: right;
+    margin-right: $input-padding-x / 2;
+    margin-top: calc((#{$input-height-without-calc-for-ie} + #{$spinner-height}) / -2);
+
+    &.spinner-border-sm {
+      margin-top: calc((#{$input-height-without-calc-for-ie} + #{$spinner-height-sm}) / -2);
+    }
+  }
+}
+```
+
+<hr>
+
 Bootstrap 4 spinner for `<input>` and `<button>`
 
 ![demo](demo.gif)
