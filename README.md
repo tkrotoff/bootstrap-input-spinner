@@ -54,7 +54,13 @@ Example: https://codesandbox.io/s/github/tkrotoff/bootstrap-spinner
 
 `yarn add @tkrotoff/bootstrap-spinner` or `npm install @tkrotoff/bootstrap-spinner`
 
-Import [bootstrap4-spinner.scss](src/bootstrap4-spinner.scss) and then modify your [Bootstrap 4 code](https://getbootstrap.com/docs/4.3/components/forms/) as follow:
+Import [bootstrap4-spinner.scss](src/bootstrap4-spinner.scss):
+
+```SCSS
+@import '~@tkrotoff/bootstrap-spinner/src/bootstrap4-spinner';
+```
+
+Modify your [Bootstrap 4 code](https://getbootstrap.com/docs/4.3/components/forms/) as follow:
 
 ```HTML
 <div class="form-group">
@@ -74,7 +80,7 @@ Import [bootstrap4-spinner.scss](src/bootstrap4-spinner.scss) and then modify yo
 You can change the spinner size by overwriting Sass variable `$spinner-size`:
 
 ```SCSS
-import '~@tkrotoff/bootstrap-spinner/src/bootstrap4-spinner';
+@import '~@tkrotoff/bootstrap-spinner/src/bootstrap4-spinner';
 
 $spinner-size: 40px;
 ```
