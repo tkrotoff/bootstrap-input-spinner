@@ -52,7 +52,7 @@ Example: https://codesandbox.io/s/github/tkrotoff/bootstrap-spinner
 
 ## Usage
 
-`yarn add @tkrotoff/bootstrap-spinner` or `npm install @tkrotoff/bootstrap-spinner`
+`npm install @tkrotoff/bootstrap-spinner`
 
 Import [bootstrap4-spinner.scss](src/bootstrap4-spinner.scss):
 

@@ -7,4 +7,4 @@ dist/
 .browserslistrc
 LICENSE
 *.gif
-yarn.lock
+package-lock.json
