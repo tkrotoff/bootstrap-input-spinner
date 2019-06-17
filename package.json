@@ -1,17 +1,17 @@
 {
-  "name": "@tkrotoff/bootstrap-spinner",
-  "version": "0.0.4",
+  "name": "@tkrotoff/bootstrap-input-spinner",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tkrotoff/bootstrap-spinner.git"
+    "url": "https://github.com/tkrotoff/bootstrap-input-spinner.git"
   },
-  "description": "Bootstrap 4 spinner for <input> and <button>",
+  "description": "Bootstrap >= 4.2 spinner/loading/pending indicator for <input>",
   "license": "MIT",
   "keywords": [
     "bootstrap4",
     "bootstrap",
     "input",
-    "button",
+    "loading",
     "spinner"
   ],
   "main": "example/index.html",

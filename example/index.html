@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>bootstrap-spinner</title>
+    <title>bootstrap-input-spinner</title>
   </head>
 
   <body>
     <div class="container-fluid">
-      <h1>bootstrap-spinner</h1>
+      <h1>bootstrap-input-spinner</h1>
 
       <p>
         Example taken from
@@ -20,68 +20,46 @@
           <label for="exampleInputEmail1">Email address</label>
           <input
             type="email"
-            class="form-control is-pending"
+            class="form-control is-loading is-loading-sm"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             placeholder="Enter email"
           />
-          <span class="spinner"></span>
+          <span class="spinner-border spinner-border-sm"></span>
           <small id="emailHelp" class="form-text text-muted">
             We'll never share your email with anyone else.
           </small>
         </div>
+
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
           <input
             type="password"
-            class="form-control"
+            class="form-control is-loading"
             id="exampleInputPassword1"
             placeholder="Password"
           />
+          <span class="spinner-grow text-warning"></span>
         </div>
+
+        <div class="form-group">
+          <label for="exampleInputConfirmPassword1">Confirm password</label>
+          <input
+            type="password"
+            class="form-control is-valid"
+            id="exampleInputConfirmPassword1"
+            placeholder="Re-enter password"
+          />
+        </div>
+
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1" />
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-
-        <button type="submit" class="btn btn-primary btn-spinner">
-          <span class="spinner"></span>
+        <button type="submit" class="btn btn-primary">
+          <span class="spinner-border spinner-border-sm"></span>
           Submit
         </button>
-
-        <br />
-        <br />
-
-        <button type="submit" class="btn btn-lg btn-primary">Submit</button>
-
-        <button type="submit" class="btn btn-lg btn-primary btn-spinner">
-          <span class="spinner"></span>
-          Submit
-        </button>
-
-        <br />
-        <br />
-
-        <button type="submit" class="btn btn-sm btn-primary">Submit</button>
-
-        <button type="submit" class="btn btn-sm btn-primary btn-spinner">
-          <span class="spinner"></span>
-          Submit
-        </button>
-
-        <br />
-        <br />
-
-        <button type="submit">Submit</button>
-
-        <button type="submit" class="btn-spinner">
-          <span class="spinner"></span>
-          Submit
-        </button>
-
-        <br />
-        <br />
       </form>
     </div>
 
