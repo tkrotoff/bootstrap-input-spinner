@@ -70,12 +70,10 @@ input.is-pending {
 
   // See https://github.com/twbs/bootstrap/blob/v4.1.3/scss/_buttons.scss#L62
   @each $color, $value in $theme-colors {
-    &.btn-#{$color} {
-      span.spinner {
-        // See https://github.com/twbs/bootstrap/blob/v4.1.3/scss/mixins/_buttons.scss#L7
-        border-color: color-yiq($value);
-        border-top-color: $value;
-      }
+    &.btn-#{$color} span.spinner {
+      // See https://github.com/twbs/bootstrap/blob/v4.1.3/scss/mixins/_buttons.scss#L7
+      border-color: color-yiq($value);
+      border-top-color: $value;
     }
   }
 }
