@@ -1,3 +1,7 @@
+## v0.1.1 (2019/06/19)
+
+- Fix password input under IE: remove inner calc()
+
 ## v0.1.0 (2019/06/18)
 
 - Rename from bootstrap-spinner to bootstrap-input-spinner
