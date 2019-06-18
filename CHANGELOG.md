@@ -1,3 +1,8 @@
+## v0.1.0 (2019/06/18)
+
+- Rename from bootstrap-spinner to bootstrap-input-spinner
+- Rewrite to support Bootstrap >= 4.2
+
 ## v0.0.4 (2019/06/17)
 
 - Use Stylelint
