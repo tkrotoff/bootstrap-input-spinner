@@ -1,17 +1,20 @@
 // Other implementations:
 // - https://react.semantic-ui.com/elements/input/#states-loading
 
+// Remove inner calc() for IE, see https://github.com/postcss/autoprefixer/issues/1153
+@function removeInnerCalc_IEFix($innerCalc) {
+  @return str-replace($innerCalc, 'calc');
+}
+
 @function calcInputRightPadding($rightElementWidth) {
+  // prettier-ignore
   @return calc(
-    #{$rightElementWidth} - #{$input-border-width} * 2 + #{$input-height-inner-quarter} * 2
+    #{$rightElementWidth} - #{$input-border-width} * 2 + #{removeInnerCalc_IEFix($input-height-inner-quarter)} * 2
   );
 }
 
 @function calcInputTopMargin($rightElementHeight) {
-  // Fix for IE, see https://github.com/postcss/autoprefixer/issues/1153
-  $input-height-without-calc-for-ie: str-replace($input-height, 'calc');
-
-  @return calc((#{$input-height-without-calc-for-ie} + #{$rightElementHeight}) / -2);
+  @return calc((#{removeInnerCalc_IEFix($input-height)} + #{$rightElementHeight}) / -2);
 }
 
 input.is-loading {
