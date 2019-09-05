@@ -28,8 +28,14 @@ input.is-loading {
     padding-right: $input-height-inner;
   }
 
-  + .spinner-border,
-  + .spinner-grow {
+  // Cannot be + .spinner-* otherwise it doesn't play nice with @tkrotoff/bootstrap-floating-label, use case:
+  // <div class="floating-label">
+  //   <input class="is-loading">
+  //   <label>
+  //   <span class="spinner-border spinner-border-sm"> ==> cannot be + .spinner-*
+  // </div>
+  ~ .spinner-border,
+  ~ .spinner-grow {
     float: right;
 
     // Same as the validation icons
