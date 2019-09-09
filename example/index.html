@@ -10,60 +10,144 @@
     <div class="container-fluid">
       <h1>bootstrap-input-spinner</h1>
 
-      <p>
-        Example taken from
-        <a href="https://getbootstrap.com/docs/4.3/components/forms/#overview">
-          Bootstrap Forms Overview
-        </a>
-      </p>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="dev-tools" onclick="toggleDevTools()" />
+        <label class="form-check-label" for="dev-tools">DevTools</label>
+      </div>
 
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input
-            type="email"
-            class="form-control is-loading is-loading-sm"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
-          />
-          <span class="spinner-border spinner-border-sm"></span>
-          <small id="emailHelp" class="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
-        </div>
+      <div class="form-group">
+        <input class="form-control is-valid" placeholder="is-valid" />
+      </div>
 
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input
-            type="password"
-            class="form-control is-loading"
-            id="exampleInputPassword1"
-            placeholder="Password"
-          />
-          <span class="spinner-grow text-warning"></span>
-        </div>
+      <div class="form-group">
+        <input
+          class="form-control is-loading is-loading-sm"
+          placeholder="spinner-border spinner-border-sm"
+        />
+        <span class="spinner-border spinner-border-sm"></span>
+      </div>
 
-        <div class="form-group">
-          <label for="exampleInputConfirmPassword1">Confirm password</label>
-          <input
-            type="password"
-            class="form-control is-valid"
-            id="exampleInputConfirmPassword1"
-            placeholder="Re-enter password"
-          />
-        </div>
+      <div class="form-group">
+        <input
+          class="form-control is-loading is-loading-sm"
+          placeholder="spinner-border spinner-border-sm text-warning"
+        />
+        <span class="spinner-border spinner-border-sm text-warning"></span>
+      </div>
 
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">
-          <span class="spinner-border spinner-border-sm"></span>
-          Submit
-        </button>
-      </form>
+      <div class="form-group">
+        <input class="form-control is-loading" placeholder="spinner-border" />
+        <span class="spinner-border"></span>
+      </div>
+
+      <div class="form-group">
+        <input
+          class="form-control is-loading is-loading-sm"
+          placeholder="spinner-grow spinner-grow-sm"
+        />
+        <span class="spinner-grow spinner-grow-sm"></span>
+      </div>
+
+      <div class="form-group">
+        <input class="form-control is-loading" placeholder="spinner-grow" />
+        <span class="spinner-grow"></span>
+      </div>
+
+      <div class="form-group">
+        <input class="form-control is-loading" placeholder="spinner-grow text-warning" />
+        <span class="spinner-grow text-warning"></span>
+      </div>
+
+      <div class="form-group">
+        <input class="form-control is-valid" placeholder="is-valid" />
+      </div>
+
+      <div class="form-group">
+        <input
+          class="form-control is-loading is-loading-sm is-valid"
+          placeholder="is-valid spinner-border spinner-border-sm"
+        />
+        <span class="spinner-border spinner-border-sm"></span>
+      </div>
+
+      <div class="form-group">
+        <input class="form-control is-invalid" placeholder="is-invalid" />
+      </div>
+
+      <div class="form-group">
+        <input
+          class="form-control is-loading is-loading-sm is-invalid"
+          placeholder="is-invalid spinner-border spinner-border-sm"
+        />
+        <span class="spinner-border spinner-border-sm"></span>
+      </div>
+
+      <div class="form-group">
+        <input class="form-control is-loading is-valid" placeholder="is-valid spinner-border" />
+        <span class="spinner-border"></span>
+      </div>
+
+      <div class="form-group">
+        <input
+          class="form-control is-loading is-loading-sm is-valid"
+          placeholder="is-valid spinner-grow spinner-grow-sm"
+        />
+        <span class="spinner-grow spinner-grow-sm"></span>
+      </div>
+
+      <div class="form-group">
+        <input
+          class="form-control is-loading is-loading-sm is-invalid"
+          placeholder="is-invalid spinner-grow spinner-grow-sm"
+        />
+        <span class="spinner-grow spinner-grow-sm"></span>
+      </div>
+
+      <div class="form-group">
+        <input class="form-control is-loading is-valid" placeholder="is-valid spinner-grow" />
+        <span class="spinner-grow"></span>
+      </div>
+
+      <button type="button" class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span>
+        spinner-border spinner-border-sm
+      </button>
     </div>
+
+    <style>
+      .spinner-grow {
+        opacity: initial;
+        animation: none;
+      }
+      .spinner-border {
+        border-right-color: initial;
+        animation: none;
+      }
+    </style>
+    <script>
+      const loremIpsum =
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Dolor sed viverra ipsum nunc aliquet bibendum enim. In massa tempor nec feugiat.';
+      const stylesheets = document.styleSheets;
+      const devTools = stylesheets[stylesheets.length - 1];
+
+      const inputs = document.getElementsByTagName('input');
+
+      function toggleDevTools() {
+        devTools.disabled = !devTools.disabled;
+
+        for (let i = 0; i < inputs.length; i++) {
+          const input = inputs[i];
+          if (input.type === 'text') {
+            input.value = devTools.disabled ? '' : loremIpsum;
+          }
+        }
+      }
+
+      // Disable DevTools by default
+      toggleDevTools();
+    </script>
 
     <script src="./index.js"></script>
   </body>

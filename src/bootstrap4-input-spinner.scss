@@ -1,29 +1,41 @@
 // Other implementations:
 // - https://react.semantic-ui.com/elements/input/#states-loading
 
+//
+// <input class="form-control is-valid">
+//
+//  _____________________
+// |                    |
+// |              /     |
+// |            \/      |
+// |                    |
+// |____________________|
+//                 <----> $input-height-inner-quarter = 9px
+//        <-------------> $input-height-inner = 36px
+//
+
 // Remove inner calc() for IE, see https://github.com/postcss/autoprefixer/issues/1153
 @function removeInnerCalc_IEFix($innerCalc) {
   @return str-replace($innerCalc, 'calc');
 }
 
-@function calcInputRightPadding($rightElementWidth) {
-  // prettier-ignore
-  @return calc(
-    #{$rightElementWidth} - #{$input-border-width} * 2 + #{removeInnerCalc_IEFix($input-height-inner-quarter)} * 2
-  );
-}
-
-@function calcInputTopMargin($rightElementHeight) {
-  @return calc((#{removeInnerCalc_IEFix($input-height)} + #{$rightElementHeight}) / -2);
-}
-
 input.is-loading {
   // Cannot use the same as the validation icons because .spinner-border is too big
-  padding-right: calcInputRightPadding($spinner-width);
+  // prettier-ignore
+  padding-right: calc(
+    #{removeInnerCalc_IEFix(
+      #{$input-height-inner-quarter} + $spinner-width + #{$input-height-inner-quarter}
+    )}
+  );
 
   &.is-loading-sm {
     // Same as the validation icons, this is possible because .spinner-border-sm is small enough
-    //padding-right: calcInputRightPadding($spinner-width-sm);
+    // prettier-ignore
+    //padding-right: calc(
+    //  #{removeInnerCalc_IEFix(
+    //    #{$input-height-inner-quarter} + $spinner-width-sm + #{$input-height-inner-quarter}
+    //  )}
+    //);
     // See https://github.com/twbs/bootstrap/blob/v4.3.1/scss/mixins/_forms.scss#L59
     padding-right: $input-height-inner;
   }
@@ -42,11 +54,45 @@ input.is-loading {
     // See https://github.com/twbs/bootstrap/blob/v4.3.1/scss/mixins/_forms.scss#L62
     margin-right: $input-height-inner-quarter;
 
-    margin-top: calcInputTopMargin($spinner-height);
+    margin-top: calc((#{removeInnerCalc_IEFix(#{$input-height} + $spinner-height)}) / -2);
 
     &.spinner-border-sm,
     &.spinner-grow-sm {
-      margin-top: calcInputTopMargin($spinner-height-sm);
+      margin-top: calc((#{removeInnerCalc_IEFix(#{$input-height} + $spinner-height-sm)}) / -2);
+    }
+  }
+}
+
+// Handle <input class="form-control is-loading is-valid">
+//
+// See https://github.com/twbs/bootstrap/blob/v4.3.1/scss/_forms.scss#L245
+@each $state, $data in $form-validation-states {
+  // See https://github.com/twbs/bootstrap/blob/v4.3.1/scss/mixins/_forms.scss#L53-L55
+  .form-control {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      &.is-loading {
+        // prettier-ignore
+        padding-right: calc(
+          #{removeInnerCalc_IEFix(
+            #{$input-height-inner-quarter} + $spinner-width + #{$input-height-inner}
+          )}
+        );
+      }
+
+      &.is-loading-sm {
+        // prettier-ignore
+        padding-right: calc(
+          #{removeInnerCalc_IEFix(
+            #{$input-height-inner-quarter} + $spinner-width-sm + #{$input-height-inner}
+          )}
+        );
+      }
+
+      ~ .spinner-border,
+      ~ .spinner-grow {
+        margin-right: $input-height-inner;
+      }
     }
   }
 }
