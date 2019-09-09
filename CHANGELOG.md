@@ -1,3 +1,8 @@
+## v0.2.0 (2019/09/10)
+
+- Support is-loading and is-valid/is-invalid at the same time
+- Use ~ instead of + otherwise it doesn't play nice with @tkrotoff/bootstrap-floating-label
+
 ## v0.1.1 (2019/06/19)
 
 - Fix password input under IE: remove inner calc()
