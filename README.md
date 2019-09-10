@@ -7,7 +7,7 @@ Bootstrap >= 4.2 spinner/loading/pending indicator for `<input>`
 
 ![demo](doc/demo.gif)
 
-Example: https://codesandbox.io/s/github/tkrotoff/bootstrap-input-spinner
+Example: https://codesandbox.io/s/github/tkrotoff/bootstrap-input-spinner/tree/codesandbox.io
 
 - Small: less than 50 lines of [SCSS](src/bootstrap4-input-spinner.scss)
 - Works in latest browsers and IE >= 10
