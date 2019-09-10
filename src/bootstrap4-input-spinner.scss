@@ -23,18 +23,18 @@ input.is-loading {
   // Cannot use the same as the validation icons because .spinner-border is too big
   // prettier-ignore
   padding-right: calc(
-    #{removeInnerCalc_IEFix(
-      #{$input-height-inner-quarter} + $spinner-width + #{$input-height-inner-quarter}
-    )}
+    #{removeInnerCalc_IEFix(#{$input-height-inner-quarter})} +
+    #{$spinner-width} +
+    #{removeInnerCalc_IEFix(#{$input-height-inner-quarter})}
   );
 
   &.is-loading-sm {
     // Same as the validation icons, this is possible because .spinner-border-sm is small enough
     // prettier-ignore
     //padding-right: calc(
-    //  #{removeInnerCalc_IEFix(
-    //    #{$input-height-inner-quarter} + $spinner-width-sm + #{$input-height-inner-quarter}
-    //  )}
+    //  #{removeInnerCalc_IEFix(#{$input-height-inner-quarter})} +
+    //  #{$spinner-width-sm} +
+    //  #{removeInnerCalc_IEFix(#{$input-height-inner-quarter})}
     //);
     // See https://github.com/twbs/bootstrap/blob/v4.3.1/scss/mixins/_forms.scss#L59
     padding-right: $input-height-inner;
@@ -54,11 +54,11 @@ input.is-loading {
     // See https://github.com/twbs/bootstrap/blob/v4.3.1/scss/mixins/_forms.scss#L62
     margin-right: $input-height-inner-quarter;
 
-    margin-top: calc((#{removeInnerCalc_IEFix(#{$input-height} + $spinner-height)}) / -2);
+    margin-top: calc((#{removeInnerCalc_IEFix(#{$input-height})} + #{$spinner-height}) / -2);
 
     &.spinner-border-sm,
     &.spinner-grow-sm {
-      margin-top: calc((#{removeInnerCalc_IEFix(#{$input-height} + $spinner-height-sm)}) / -2);
+      margin-top: calc((#{removeInnerCalc_IEFix(#{$input-height})} + #{$spinner-height-sm}) / -2);
     }
   }
 }
@@ -74,18 +74,18 @@ input.is-loading {
       &.is-loading {
         // prettier-ignore
         padding-right: calc(
-          #{removeInnerCalc_IEFix(
-            #{$input-height-inner-quarter} + $spinner-width + #{$input-height-inner}
-          )}
+          #{removeInnerCalc_IEFix(#{$input-height-inner-quarter})} +
+          #{$spinner-width} +
+          #{removeInnerCalc_IEFix(#{$input-height-inner})}
         );
       }
 
       &.is-loading-sm {
         // prettier-ignore
         padding-right: calc(
-          #{removeInnerCalc_IEFix(
-            #{$input-height-inner-quarter} + $spinner-width-sm + #{$input-height-inner}
-          )}
+          #{removeInnerCalc_IEFix(#{$input-height-inner-quarter})} +
+          #{$spinner-width-sm} +
+          #{removeInnerCalc_IEFix(#{$input-height-inner})}
         );
       }
 
