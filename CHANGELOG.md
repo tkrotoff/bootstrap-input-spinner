@@ -1,3 +1,8 @@
+## v0.2.1 (2019/09/10)
+
+- Fix scss with npm package sass
+- Switch from node-sass to sass
+
 ## v0.2.0 (2019/09/10)
 
 - Support is-loading and is-valid/is-invalid at the same time
