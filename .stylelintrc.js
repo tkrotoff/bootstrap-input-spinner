@@ -18,6 +18,7 @@ module.exports = {
     'rule-empty-line-before': null,
     'at-rule-empty-line-before': null,
     'scss/at-extend-no-missing-placeholder': null,
-    'order/order': null
+    'order/order': null,
+    'function-calc-no-invalid': null
   }
 };
