@@ -1,3 +1,7 @@
+## v0.3.0 (2020/01/05)
+
+- Update npm packages
+
 ## v0.2.1 (2019/09/10)
 
 - Fix scss with npm package sass
