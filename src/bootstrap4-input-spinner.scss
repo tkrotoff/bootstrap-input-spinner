@@ -14,7 +14,7 @@
 //        <-------------> $input-height-inner = 36px
 //
 
-// Remove inner calc() for IE, see https://github.com/postcss/autoprefixer/issues/1153
+// Remove inner calc() for IE, https://github.com/postcss/autoprefixer/issues/1153
 @function removeInnerCalc_IEFix($innerCalc) {
   @return str-replace($innerCalc, 'calc');
 }
@@ -36,7 +36,7 @@ input.is-loading {
     //  #{$spinner-width-sm} +
     //  #{removeInnerCalc_IEFix(#{$input-height-inner-quarter})}
     //);
-    // See https://github.com/twbs/bootstrap/blob/v4.3.1/scss/mixins/_forms.scss#L59
+    // https://github.com/twbs/bootstrap/blob/v4.3.1/scss/mixins/_forms.scss#L59
     padding-right: $input-height-inner;
   }
 
@@ -51,7 +51,7 @@ input.is-loading {
     float: right;
 
     // Same as the validation icons
-    // See https://github.com/twbs/bootstrap/blob/v4.3.1/scss/mixins/_forms.scss#L62
+    // https://github.com/twbs/bootstrap/blob/v4.3.1/scss/mixins/_forms.scss#L62
     margin-right: $input-height-inner-quarter;
 
     margin-top: calc((#{removeInnerCalc_IEFix(#{$input-height})} + #{$spinner-height}) / -2);
@@ -65,9 +65,9 @@ input.is-loading {
 
 // Handle <input class="form-control is-loading is-valid">
 //
-// See https://github.com/twbs/bootstrap/blob/v4.3.1/scss/_forms.scss#L245
+// https://github.com/twbs/bootstrap/blob/v4.3.1/scss/_forms.scss#L245
 @each $state, $data in $form-validation-states {
-  // See https://github.com/twbs/bootstrap/blob/v4.3.1/scss/mixins/_forms.scss#L53-L55
+  // https://github.com/twbs/bootstrap/blob/v4.3.1/scss/mixins/_forms.scss#L53-L55
   .form-control {
     .was-validated &:#{$state},
     &.is-#{$state} {
