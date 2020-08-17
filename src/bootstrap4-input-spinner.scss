@@ -63,6 +63,15 @@ input.is-loading {
   }
 }
 
+// Make the spinner in a disabled input look like a spinner in a disabled button (https://getbootstrap.com/docs/4.5/components/spinners/#buttons)
+// Note: is-valid and is-invalid images don't change their opacity when the input is disabled
+input.is-loading:disabled {
+  ~ .spinner-border,
+  ~ .spinner-grow {
+    opacity: $btn-disabled-opacity;
+  }
+}
+
 // Handle <input class="form-control is-loading is-valid">
 //
 // https://github.com/twbs/bootstrap/blob/v4.3.1/scss/_forms.scss#L245
