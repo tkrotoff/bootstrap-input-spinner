@@ -1,3 +1,8 @@
+## 0.4.0 (2020/08/17)
+
+- Breaking change: rename bootstrap4-input-spinner.scss to bootstrap-input-spinner.scss
+  - I won't have the man power to maintain Bootstrap 4 & 5
+
 ## 0.3.2 (2020/08/17)
 
 - Opacify the spinner in a disabled input
