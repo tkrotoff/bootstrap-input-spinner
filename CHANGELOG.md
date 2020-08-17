@@ -1,3 +1,8 @@
+## 0.3.2 (2020/08/17)
+
+- Opacify the spinner in a disabled input
+- Update npm packages
+
 ## 0.3.1 (2020/03/18)
 
 - CI/CD with GitHub Actions
