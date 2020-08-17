@@ -11,7 +11,7 @@ Bootstrap >= 4.2 spinner/loading/pending indicator for `<input>`
 
 Example: https://codesandbox.io/s/github/tkrotoff/bootstrap-input-spinner/tree/codesandbox.io
 
-- Small: less than 50 lines of [SCSS](src/bootstrap4-input-spinner.scss)
+- Small: less than 50 lines of [SCSS](src/bootstrap-input-spinner.scss)
 - Works in latest browsers and IE >= 10
 - Uses [Bootstrap variables](https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults): nothing hardcoded
 
@@ -21,10 +21,10 @@ Example: https://codesandbox.io/s/github/tkrotoff/bootstrap-input-spinner/tree/c
 
 `npm install @tkrotoff/bootstrap-input-spinner`
 
-Import [bootstrap4-input-spinner.scss](src/bootstrap4-input-spinner.scss):
+Import [bootstrap-input-spinner.scss](src/bootstrap-input-spinner.scss):
 
 ```SCSS
-@import '~@tkrotoff/bootstrap-input-spinner/src/bootstrap4-input-spinner';
+@import '~@tkrotoff/bootstrap-input-spinner/src/bootstrap-input-spinner';
 ```
 
 Modify your [Bootstrap 4 code](https://getbootstrap.com/docs/4.3/components/forms/) as follow:
