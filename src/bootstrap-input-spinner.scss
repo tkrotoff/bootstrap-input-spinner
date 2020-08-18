@@ -63,9 +63,12 @@ input.is-loading {
   }
 }
 
-// Make the spinner in a disabled input look like a spinner in a disabled button (https://getbootstrap.com/docs/4.5/components/spinners/#buttons)
-// Note: is-valid and is-invalid images don't change their opacity when the input is disabled
-input.is-loading:disabled {
+// Make the spinner in a disabled/readonly input look like a spinner in a disabled button (https://getbootstrap.com/docs/4.5/components/spinners/#buttons)
+// Note: is-valid and is-invalid images don't change their opacity when the input is disabled/readonly
+// Note: by default browsers style disabled fields but not readonly fields
+// Bootstrap 4 does style readonly fields: https://getbootstrap.com/docs/4.5/components/forms/#readonly
+input.is-loading:disabled,
+input.is-loading[readonly] {
   ~ .spinner-border,
   ~ .spinner-grow {
     opacity: $btn-disabled-opacity;
