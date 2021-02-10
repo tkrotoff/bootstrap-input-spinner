@@ -37,6 +37,7 @@
     "bootstrap": ">=4.4"
   },
   "devDependencies": {
+    "@tkrotoff/bootstrap-floating-label": "^0.7.0",
     "@types/stylelint": "^9.10.1",
     "bootstrap": "^4.6.0",
     "husky": "^4.3.8",
