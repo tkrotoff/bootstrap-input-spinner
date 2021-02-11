@@ -1,3 +1,8 @@
+// String.repeat() not supported by IE
+// https://github.com/parcel-bundler/parcel/issues/3742
+// https://github.com/parcel-bundler/parcel/issues/3216
+import 'core-js/features/string/repeat';
+
 import tocbot from 'tocbot';
 
 import './index.scss';

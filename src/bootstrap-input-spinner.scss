@@ -19,6 +19,11 @@
 //   top: 0;
 // }
 
+// Remove inner calc() for IE: https://github.com/postcss/autoprefixer/issues/1153
+@function remove-inner-calc-ie-fix($innerCalc) {
+  @return str-replace($innerCalc, 'calc', '');
+}
+
 // https://github.com/twbs/bootstrap/blob/v4.6.0/scss/mixins/_forms.scss#L88
 // calc(1.5em + 0.75rem)
 // 36px
@@ -40,7 +45,9 @@ $is-invalid-icon-padding-x: 1px;
 $is-invalid-icon-padding-y: 1px;
 
 // 11px
-$spinner-sm-regular-top: calc(#{$textarea-is-valid-top-position} + #{$is-valid-icon-padding-y * 2});
+$spinner-sm-regular-top: calc(
+  #{remove-inner-calc-ie-fix(#{$textarea-is-valid-top-position})} + #{$is-valid-icon-padding-y * 2}
+);
 
 $spinner-lg-regular-top: 3px;
 
@@ -146,11 +153,13 @@ $space-for-spinner-sm: 25px;
   .is-loading {
     > .form-control {
       @include form-validation-state-selector($state) {
-        padding-right: calc(#{$is-valid-padding-right} + #{$space-for-spinner-sm});
+        padding-right: calc(
+          #{remove-inner-calc-ie-fix(#{$is-valid-padding-right})} + #{$space-for-spinner-sm}
+        );
 
         ~ .spinner-border,
         ~ .spinner-grow {
-          right: calc(#{$spinner-custom-select-right-position} + 3px);
+          right: calc(#{remove-inner-calc-ie-fix(#{$spinner-custom-select-right-position})} + 3px);
         }
       }
     }
@@ -179,7 +188,9 @@ $space-for-spinner-sm: 25px;
         ~ .spinner-border,
         ~ .spinner-grow {
           // 55px
-          right: calc(#{$spinner-custom-select-right-position} + #{$space-for-spinner-sm});
+          right: calc(
+            #{remove-inner-calc-ie-fix(#{$spinner-custom-select-right-position})} + #{$space-for-spinner-sm}
+          );
         }
       }
     }
