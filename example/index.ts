@@ -1,4 +1,11 @@
+import tocbot from 'tocbot';
+
 import './index.scss';
+
+tocbot.init({
+  headingSelector: 'h2',
+  orderedList: false
+});
 
 const debugText = '-'.repeat(200);
 
