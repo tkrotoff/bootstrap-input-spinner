@@ -11,186 +11,1514 @@
       <h1>bootstrap-input-spinner</h1>
 
       <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="dev-tools" onclick="toggleDevTools()" />
-        <label class="form-check-label" for="dev-tools">DevTools</label>
-      </div>
-
-      <div class="form-group"><input class="form-control is-valid" placeholder="is-valid" /></div>
-
-      <div class="form-group">
         <input
-          class="form-control is-loading is-loading-sm"
-          placeholder="spinner-border spinner-border-sm"
+          type="checkbox"
+          class="form-check-input"
+          id="debug-mode"
+          onclick="toggleDebugMode()"
         />
-        <span class="spinner-border spinner-border-sm"></span>
+        <label class="form-check-label" for="debug-mode">Debug Mode</label>
       </div>
 
+      <h2>input</h2>
+
       <div class="form-group">
+        <input class="form-control is-valid" placeholder="is-valid" />
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group is-loading">
+        <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input class="form-control" placeholder="spinner-border spinner-border-sm text-warning" />
+        <div class="spinner-border spinner-border-sm text-warning"></div>
+      </div>
+
+      <div class="form-group is-loading">
         <input
-          class="form-control is-loading is-loading-sm"
-          placeholder="spinner-border spinner-border-sm :disabled"
+          class="form-control"
+          placeholder="disabled spinner-border spinner-border-sm"
           disabled
         />
-        <span class="spinner-border spinner-border-sm"></span>
+        <div class="spinner-border spinner-border-sm"></div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group is-loading">
         <input
-          class="form-control is-loading is-loading-sm"
-          placeholder="spinner-border spinner-border-sm [readonly]"
+          class="form-control"
+          placeholder="readonly spinner-border spinner-border-sm"
           readonly
         />
-        <span class="spinner-border spinner-border-sm"></span>
+        <div class="spinner-border spinner-border-sm"></div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group is-loading">
         <input
-          class="form-control is-loading is-loading-sm"
-          placeholder="spinner-border spinner-border-sm text-warning"
-        />
-        <span class="spinner-border spinner-border-sm text-warning"></span>
-      </div>
-
-      <div class="form-group">
-        <input
-          class="form-control is-loading is-loading-sm"
-          placeholder="spinner-border spinner-border-sm text-warning :disabled"
+          class="form-control"
+          placeholder="disabled spinner-border spinner-border-sm text-warning"
           disabled
         />
-        <span class="spinner-border spinner-border-sm text-warning"></span>
+        <div class="spinner-border spinner-border-sm text-warning"></div>
       </div>
 
-      <div class="form-group">
-        <input class="form-control is-loading" placeholder="spinner-border" />
-        <span class="spinner-border"></span>
-      </div>
-
-      <div class="form-group">
-        <input class="form-control is-loading" placeholder="spinner-border :disabled" disabled />
-        <span class="spinner-border"></span>
-      </div>
-
-      <div class="form-group">
+      <div class="form-group is-loading">
         <input
-          class="form-control is-loading is-loading-sm"
-          placeholder="spinner-grow spinner-grow-sm"
+          class="form-control"
+          placeholder="readonly spinner-border spinner-border-sm text-warning"
+          readonly
         />
-        <span class="spinner-grow spinner-grow-sm"></span>
+        <div class="spinner-border spinner-border-sm text-warning"></div>
       </div>
 
-      <div class="form-group">
-        <input class="form-control is-loading" placeholder="spinner-grow" />
-        <span class="spinner-grow"></span>
-      </div>
-
-      <div class="form-group">
-        <input class="form-control is-loading" placeholder="spinner-grow :disabled" disabled />
-        <span class="spinner-grow"></span>
-      </div>
-
-      <div class="form-group">
-        <input class="form-control is-loading" placeholder="spinner-grow text-warning" />
-        <span class="spinner-grow text-warning"></span>
-      </div>
-
-      <div class="form-group"><input class="form-control is-valid" placeholder="is-valid" /></div>
-
-      <div class="form-group">
+      <div class="form-group is-loading">
         <input
-          class="form-control is-loading is-loading-sm is-valid"
+          class="form-control is-valid"
           placeholder="is-valid spinner-border spinner-border-sm"
         />
-        <span class="spinner-border spinner-border-sm"></span>
+        <div class="spinner-border spinner-border-sm"></div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group is-loading">
         <input
-          class="form-control is-loading is-loading-sm is-valid"
-          placeholder="is-valid spinner-border spinner-border-sm :disabled"
-          disabled
-        />
-        <span class="spinner-border spinner-border-sm"></span>
-      </div>
-
-      <div class="form-group">
-        <input class="form-control is-invalid" placeholder="is-invalid" />
-      </div>
-
-      <div class="form-group">
-        <input
-          class="form-control is-loading is-loading-sm is-invalid"
+          class="form-control is-invalid"
           placeholder="is-invalid spinner-border spinner-border-sm"
         />
-        <span class="spinner-border spinner-border-sm"></span>
+        <div class="spinner-border spinner-border-sm"></div>
       </div>
 
-      <div class="form-group">
-        <input class="form-control is-loading is-valid" placeholder="is-valid spinner-border" />
-        <span class="spinner-border"></span>
+      <div class="form-group is-loading">
+        <input
+          class="form-control is-valid"
+          placeholder="is-valid disabled spinner-border spinner-border-sm"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm"></div>
       </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control is-valid"
+          placeholder="is-valid readonly spinner-border spinner-border-sm"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control is-invalid"
+          placeholder="is-invalid disabled spinner-border spinner-border-sm"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control is-invalid"
+          placeholder="is-invalid readonly spinner-border spinner-border-sm"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group is-loading">
+        <input class="form-control" placeholder="spinner-border" />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input class="form-control" placeholder="disabled spinner-border" disabled />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input class="form-control" placeholder="readonly spinner-border" readonly />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input class="form-control is-valid" placeholder="is-valid spinner-border" />
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2>spinner-grow</h2>
+
+      <h3>sm</h3>
+
+      <div class="form-group is-loading">
+        <input class="form-control" placeholder="spinner-grow spinner-grow-sm" />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input class="form-control" placeholder="disabled spinner-grow spinner-grow-sm" disabled />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input class="form-control" placeholder="readonly spinner-grow spinner-grow-sm" readonly />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input class="form-control is-valid" placeholder="is-valid spinner-grow spinner-grow-sm" />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group is-loading">
+        <input class="form-control" placeholder="spinner-grow" />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input class="form-control" placeholder="disabled spinner-grow" disabled />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input class="form-control" placeholder="readonly spinner-grow" readonly />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input class="form-control is-valid" placeholder="is-valid spinner-grow" />
+        <div class="spinner-grow"></div>
+      </div>
+
+      <h2>textarea</h2>
+
+      <div class="form-group">
+        <textarea class="form-control is-valid" placeholder="is-valid"></textarea>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group is-loading">
+        <textarea class="form-control" placeholder="spinner-border spinner-border-sm"></textarea>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <textarea
+          class="form-control"
+          placeholder="disabled spinner-border spinner-border-sm"
+          disabled
+        ></textarea>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <textarea
+          class="form-control"
+          placeholder="readonly spinner-border spinner-border-sm"
+          readonly
+        ></textarea>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <textarea
+          class="form-control is-valid"
+          placeholder="is-valid spinner-border spinner-border-sm"
+        ></textarea>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3>sm + rows='1'</h3>
+
+      <div class="form-group is-loading">
+        <textarea class="form-control" rows="1" placeholder="rows='1'"></textarea>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group is-loading">
+        <textarea class="form-control" placeholder="spinner-border"></textarea>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <textarea class="form-control" placeholder="disabled spinner-border" disabled></textarea>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <textarea class="form-control" placeholder="readonly spinner-border" readonly></textarea>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <textarea class="form-control is-valid" placeholder="is-valid spinner-border"></textarea>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h3>lg + rows='1'</h3>
+
+      <div class="form-group is-loading">
+        <textarea class="form-control" rows="1" placeholder="rows='1'"></textarea>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2>select (broken)</h2>
+
+      <div class="form-group">
+        <select class="form-control is-valid">
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group is-loading">
+        <select class="form-control">
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="form-control" disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="form-control is-valid">
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group is-loading">
+        <select class="form-control">
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="form-control" disabled>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="form-control is-valid">
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2>custom-select</h2>
+
+      <div class="form-group">
+        <select class="custom-select is-valid">
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group is-loading">
+        <select class="custom-select">
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="custom-select" disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="custom-select is-valid">
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group is-loading">
+        <select class="custom-select">
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="custom-select" disabled>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="custom-select is-valid">
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2>select multiple (broken)</h2>
+
+      <div class="form-group">
+        <select class="form-control is-valid" multiple>
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group is-loading">
+        <select class="form-control" multiple>
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="form-control" multiple disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="form-control is-valid" multiple>
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group is-loading">
+        <select class="form-control" multiple>
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="form-control" multiple disabled>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="form-control is-valid" multiple>
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2>custom-select multiple</h2>
+
+      <div class="form-group">
+        <select class="custom-select is-valid" multiple>
+          <option>is-valid</option>
+        </select>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group is-loading">
+        <select class="custom-select" multiple>
+          <option>spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="custom-select" multiple disabled>
+          <option>disabled spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="custom-select is-valid" multiple>
+          <option>is-valid spinner-border spinner-border-sm</option>
+        </select>
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group is-loading">
+        <select class="custom-select" multiple>
+          <option>spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="custom-select" multiple disabled>
+          <option>disabled spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <select class="custom-select is-valid" multiple>
+          <option>is-valid spinner-border</option>
+        </select>
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2>form-control-sm</h2>
 
       <div class="form-group">
         <input
-          class="form-control is-loading is-loading-sm is-valid"
-          placeholder="is-valid spinner-grow spinner-grow-sm"
+          class="form-control form-control-sm is-valid"
+          placeholder="form-control-sm is-valid"
         />
-        <span class="spinner-grow spinner-grow-sm"></span>
       </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-sm"
+          placeholder="form-control-sm spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-sm"
+          placeholder="form-control-sm disabled spinner-border spinner-border-sm"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-sm"
+          placeholder="form-control-sm readonly spinner-border spinner-border-sm"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-sm is-valid"
+          placeholder="form-control-sm is-valid spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group is-loading">
+        <input class="form-control form-control-sm" placeholder="form-control-sm spinner-border" />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-sm"
+          placeholder="form-control-sm disabled spinner-border"
+          disabled
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-sm"
+          placeholder="form-control-sm readonly spinner-border"
+          readonly
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-sm is-valid"
+          placeholder="form-control-sm is-valid spinner-border"
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2>form-control-lg</h2>
 
       <div class="form-group">
         <input
-          class="form-control is-loading is-loading-sm is-invalid"
-          placeholder="is-invalid spinner-grow spinner-grow-sm"
+          class="form-control form-control-lg is-valid"
+          placeholder="form-control-lg is-valid"
         />
-        <span class="spinner-grow spinner-grow-sm"></span>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-lg"
+          placeholder="form-control-lg spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-lg"
+          placeholder="form-control-lg disabled spinner-border spinner-border-sm"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-lg"
+          placeholder="form-control-lg readonly spinner-border spinner-border-sm"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-lg is-valid"
+          placeholder="form-control-lg is-valid spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group is-loading">
+        <input class="form-control form-control-lg" placeholder="form-control-lg spinner-border" />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-lg"
+          placeholder="form-control-lg disabled spinner-border"
+          disabled
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-lg"
+          placeholder="form-control-lg readonly spinner-border"
+          readonly
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control form-control-lg is-valid"
+          placeholder="form-control-lg is-valid spinner-border"
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2>form-control-plaintext</h2>
+
+      <div class="form-group">
+        <input
+          class="form-control-plaintext is-valid"
+          placeholder="form-control-plaintext is-valid"
+        />
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control-plaintext"
+          placeholder="form-control-plaintext spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control-plaintext"
+          placeholder="form-control-plaintext disabled spinner-border spinner-border-sm"
+          disabled
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control-plaintext"
+          placeholder="form-control-plaintext readonly spinner-border spinner-border-sm"
+          readonly
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control-plaintext is-valid"
+          placeholder="form-control-plaintext is-valid spinner-border spinner-border-sm"
+        />
+        <div class="spinner-border spinner-border-sm"></div>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group is-loading">
+        <input class="form-control-plaintext" placeholder="form-control-plaintext spinner-border" />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control-plaintext"
+          placeholder="form-control-plaintext disabled spinner-border"
+          disabled
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control-plaintext"
+          placeholder="form-control-plaintext readonly spinner-border"
+          readonly
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <div class="form-group is-loading">
+        <input
+          class="form-control-plaintext is-valid"
+          placeholder="form-control-plaintext is-valid spinner-border"
+        />
+        <div class="spinner-border"></div>
+      </div>
+
+      <h2>form-inline</h2>
+
+      https://getbootstrap.com/docs/4.6/components/forms/#inline-forms
+
+      <form class="form-inline">
+        <div class="form-group mb-2 is-loading">
+          <input class="form-control-plaintext" placeholder="spinner-border spinner-border-sm" />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+        <div class="form-group mx-sm-3 mb-2 is-loading">
+          <input class="form-control" placeholder="spinner-border spinner-border-sm" />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+        <button type="button" class="btn btn-primary mb-2 is-loading">
+          <span class="spinner-border spinner-border-sm"></span>
+          spinner-border spinner-border-sm
+        </button>
+      </form>
+
+      <h2>input-group-prepend</h2>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <input class="form-control is-valid" placeholder="is-valid" />
+        </div>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group">
+        <div class="input-group is-loading">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <input
+            class="form-control rounded-right"
+            placeholder="spinner-border spinner-border-sm"
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
       </div>
 
       <div class="form-group">
-        <input class="form-control is-loading is-valid" placeholder="is-valid spinner-grow" />
-        <span class="spinner-grow"></span>
+        <div class="input-group is-loading">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <input
+            class="form-control rounded-right"
+            placeholder="disabled spinner-border spinner-border-sm"
+            disabled
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
       </div>
 
-      <button type="button" class="btn btn-primary">
-        <span class="spinner-border spinner-border-sm"></span>
-        spinner-border spinner-border-sm
-      </button>
+      <div class="form-group">
+        <div class="input-group is-loading">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <input
+            class="form-control rounded-right"
+            placeholder="readonly spinner-border spinner-border-sm"
+            readonly
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group is-loading">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <input
+            class="form-control is-valid rounded-right"
+            placeholder="is-valid spinner-border spinner-border-sm"
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group">
+        <div class="input-group is-loading">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <input class="form-control rounded-right" placeholder="spinner-border" />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group is-loading">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <input
+            class="form-control rounded-right"
+            placeholder="disabled spinner-border"
+            disabled
+          />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group is-loading">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <input
+            class="form-control rounded-right"
+            placeholder="readonly spinner-border"
+            readonly
+          />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group is-loading">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <input
+            class="form-control is-valid rounded-right"
+            placeholder="is-valid spinner-border"
+          />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <h2>input-group-append</h2>
+
+      <div class="form-group">
+        <div class="input-group">
+          <input class="form-control is-valid" placeholder="is-valid" />
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control rounded-right-0"
+              placeholder="spinner-border spinner-border-sm"
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control rounded-right-0"
+              placeholder="disabled spinner-border spinner-border-sm"
+              disabled
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control rounded-right-0"
+              placeholder="readonly spinner-border spinner-border-sm"
+              readonly
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control is-valid rounded-right-0"
+              placeholder="is-valid spinner-border spinner-border-sm"
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="is-loading flex-fill">
+            <input class="form-control rounded-right-0" placeholder="spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control rounded-right-0"
+              placeholder="disabled spinner-border"
+              disabled
+            />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="is-loading flex-fill">
+            <input class="form-control" placeholder="readonly spinner-border" readonly />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control is-valid rounded-right-0"
+              placeholder="is-valid spinner-border"
+            />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <h2>input-group-prepend + input-group-append</h2>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <input class="form-control is-valid" placeholder="is-valid" />
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <div class="is-loading flex-fill">
+            <input class="form-control rounded-0" placeholder="spinner-border spinner-border-sm" />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control rounded-0"
+              placeholder="disabled spinner-border spinner-border-sm"
+              disabled
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control rounded-0"
+              placeholder="readonly spinner-border spinner-border-sm"
+              readonly
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control is-valid rounded-0"
+              placeholder="is-valid spinner-border spinner-border-sm"
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <div class="is-loading flex-fill">
+            <input class="form-control rounded-0" placeholder="spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <div class="is-loading flex-fill">
+            <input class="form-control rounded-0" placeholder="disabled spinner-border" disabled />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <div class="is-loading flex-fill">
+            <input class="form-control rounded-0" placeholder="readonly spinner-border" readonly />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend"><span class="input-group-text">prepend</span></div>
+          <div class="is-loading flex-fill">
+            <input class="form-control is-valid rounded-0" placeholder="is-valid spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append"><span class="input-group-text">append</span></div>
+        </div>
+      </div>
+
+      <h2>input-group-sm</h2>
+
+      <div class="form-group">
+        <div class="input-group input-group-sm">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input class="form-control is-valid" placeholder="is-valid" />
+        </div>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group">
+        <div class="input-group input-group-sm is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control rounded-right"
+            placeholder="spinner-border spinner-border-sm"
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-sm is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control rounded-right"
+            placeholder="disabled spinner-border spinner-border-sm"
+            disabled
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-sm is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control rounded-right"
+            placeholder="readonly spinner-border spinner-border-sm"
+            readonly
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-sm is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control is-valid rounded-right"
+            placeholder="is-valid spinner-border spinner-border-sm"
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group">
+        <div class="input-group input-group-sm is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input class="form-control rounded-right" placeholder="spinner-border" />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-sm is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control rounded-right"
+            placeholder="disabled spinner-border"
+            disabled
+          />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-sm is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control rounded-right"
+            placeholder="readonly spinner-border"
+            readonly
+          />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-sm is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control is-valid rounded-right"
+            placeholder="is-valid spinner-border"
+          />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <h2>input-group-lg</h2>
+
+      <div class="form-group">
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input class="form-control is-valid" placeholder="is-valid" />
+        </div>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group">
+        <div class="input-group input-group-lg is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control rounded-right"
+            placeholder="spinner-border spinner-border-sm"
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-lg is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control rounded-right"
+            placeholder="disabled spinner-border spinner-border-sm"
+            disabled
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-lg is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control rounded-right"
+            placeholder="readonly spinner-border spinner-border-sm"
+            readonly
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-lg is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control is-valid rounded-right"
+            placeholder="is-valid spinner-border spinner-border-sm"
+          />
+          <div class="spinner-border spinner-border-sm"></div>
+        </div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group">
+        <div class="input-group input-group-lg is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input class="form-control rounded-right" placeholder="spinner-border" />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-lg is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control rounded-right"
+            placeholder="disabled spinner-border"
+            disabled
+          />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-lg is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control rounded-right"
+            placeholder="readonly spinner-border"
+            readonly
+          />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group input-group-lg is-loading">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend</span>
+          </div>
+          <input
+            class="form-control is-valid rounded-right"
+            placeholder="is-valid spinner-border"
+          />
+          <div class="spinner-border"></div>
+        </div>
+      </div>
+
+      <h2>prepend * 2 + input * 2 + append * 2</h2>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend1</span>
+            <span class="input-group-text">prepend2</span>
+          </div>
+          <input class="form-control is-valid" />
+          <input class="form-control is-valid" />
+          <div class="input-group-append">
+            <span class="input-group-text">append1</span>
+            <span class="input-group-text">append2</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>sm</h3>
+
+      <div class="form-group">
+        <div class="input-group fix-focus">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend1</span>
+            <span class="input-group-text">prepend2</span>
+          </div>
+          <div class="is-loading flex-fill">
+            <input class="form-control rounded-0" placeholder="spinner-border spinner-border-sm" />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="is-loading flex-fill fix-margin-left">
+            <input class="form-control rounded-0" placeholder="spinner-border spinner-border-sm" />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">append1</span>
+            <span class="input-group-text">append2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend1</span>
+            <span class="input-group-text">prepend2</span>
+          </div>
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control rounded-0"
+              placeholder="disabled spinner-border spinner-border-sm"
+              disabled
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="is-loading flex-fill fix-margin-left">
+            <input
+              class="form-control rounded-0"
+              placeholder="disabled spinner-border spinner-border-sm"
+              disabled
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">append1</span>
+            <span class="input-group-text">append2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group fix-focus">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend1</span>
+            <span class="input-group-text">prepend2</span>
+          </div>
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control rounded-0"
+              placeholder="readonly spinner-border spinner-border-sm"
+              readonly
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="is-loading flex-fill fix-margin-left">
+            <input
+              class="form-control rounded-0"
+              placeholder="readonly spinner-border spinner-border-sm"
+              readonly
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">append1</span>
+            <span class="input-group-text">append2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group fix-focus">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend1</span>
+            <span class="input-group-text">prepend2</span>
+          </div>
+          <div class="is-loading flex-fill">
+            <input
+              class="form-control is-valid rounded-0"
+              placeholder="is-valid spinner-border spinner-border-sm"
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="is-loading flex-fill fix-margin-left">
+            <input
+              class="form-control is-valid rounded-0"
+              placeholder="is-valid spinner-border spinner-border-sm"
+            />
+            <div class="spinner-border spinner-border-sm"></div>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">append1</span>
+            <span class="input-group-text">append2</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>lg</h3>
+
+      <div class="form-group">
+        <div class="input-group fix-focus">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend1</span>
+            <span class="input-group-text">prepend2</span>
+          </div>
+          <div class="is-loading flex-fill">
+            <input class="form-control rounded-0" placeholder="spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="is-loading flex-fill fix-margin-left">
+            <input class="form-control rounded-0" placeholder="spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">append1</span>
+            <span class="input-group-text">append2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend1</span>
+            <span class="input-group-text">prepend2</span>
+          </div>
+          <div class="is-loading flex-fill">
+            <input class="form-control rounded-0" placeholder="disabled spinner-border" disabled />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="is-loading flex-fill fix-margin-left">
+            <input class="form-control rounded-0" placeholder="disabled spinner-border" disabled />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">append1</span>
+            <span class="input-group-text">append2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group fix-focus">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend1</span>
+            <span class="input-group-text">prepend2</span>
+          </div>
+          <div class="is-loading flex-fill">
+            <input class="form-control rounded-0" placeholder="readonly spinner-border" readonly />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="is-loading flex-fill fix-margin-left">
+            <input class="form-control rounded-0" placeholder="readonly spinner-border" readonly />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">append1</span>
+            <span class="input-group-text">append2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group fix-focus">
+          <div class="input-group-prepend">
+            <span class="input-group-text">prepend1</span>
+            <span class="input-group-text">prepend2</span>
+          </div>
+          <div class="is-loading flex-fill">
+            <input class="form-control is-valid rounded-0" placeholder="is-valid spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="is-loading flex-fill fix-margin-left">
+            <input class="form-control is-valid rounded-0" placeholder="is-valid spinner-border" />
+            <div class="spinner-border"></div>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">append1</span>
+            <span class="input-group-text">append2</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <style>
-      .spinner-grow {
-        opacity: initial;
-        animation: none;
-      }
-      .spinner-border {
-        border-right-color: initial;
-        animation: none;
-      }
-    </style>
-    <script>
-      const loremIpsum =
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
-        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
-        'Dolor sed viverra ipsum nunc aliquet bibendum enim. In massa tempor nec feugiat.';
-      const stylesheets = document.styleSheets;
-      const devTools = stylesheets[stylesheets.length - 1];
-
-      const inputs = document.getElementsByTagName('input');
-
-      function toggleDevTools() {
-        devTools.disabled = !devTools.disabled;
-
-        for (let i = 0; i < inputs.length; i++) {
-          const input = inputs[i];
-          if (input.type === 'text') {
-            input.value = devTools.disabled ? '' : loremIpsum;
-          }
-        }
-      }
-
-      // Disable DevTools by default
-      toggleDevTools();
-    </script>
-
-    <script src="./index.js"></script>
+    <script src="./index.ts"></script>
   </body>
 </html>

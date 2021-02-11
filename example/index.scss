@@ -1,3 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import '../src/bootstrap-input-spinner';
+
+.spinner-border.stop-animation {
+  border-right-color: initial;
+  animation: none;
+}
+.spinner-grow.stop-animation {
+  opacity: initial;
+  animation: none;
+}
+
+// [Can I add background color only for padding?](https://stackoverflow.com/q/14628601#comment45555814_18424078)
+.show-padding {
+  // stylelint-disable declaration-no-important
+
+  background-image: linear-gradient($input-bg, $input-bg), linear-gradient($gray-200, $gray-200) !important;
+  // Override .is-valid
+  background-repeat: initial !important;
+  background-clip: content-box, padding-box !important;
+
+  // stylelint-enable declaration-no-important
+}

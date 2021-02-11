@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/tkrotoff/bootstrap-input-spinner.git"
   },
-  "description": "Bootstrap >= 4.2 spinner/loading/pending indicator for <input>",
+  "description": "Bootstrap >= 4.4 spinner/loading/pending indicator for <input>",
   "license": "MIT",
   "keywords": [
     "bootstrap4",
@@ -25,7 +25,8 @@
     "start": "npm run clean && parcel example/index.html --open",
     "build": "npm run clean && parcel build example/index.html --public-url ./",
     "format": "prettier --write \"**/*\"",
-    "lint": "stylelint '**/*.scss'",
+    "tsc": "tsc",
+    "lint": "stylelint '**/*.scss' && npm run tsc",
     "precommit": "npm run format && npm run lint && npm run build",
     "prepush": "npm run precommit",
     "prepublishOnly": "npm run build",
@@ -33,19 +34,20 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "bootstrap": "^4.3.1"
+    "bootstrap": ">=4.4"
   },
   "devDependencies": {
-    "bootstrap": "^4.5.2",
-    "husky": "^4.2.5",
+    "@types/stylelint": "^9.10.1",
+    "bootstrap": "^4.6.0",
+    "husky": "^4.3.8",
     "parcel-bundler": "^1.12.4",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.0.5",
-    "sass": "^1.26.10",
-    "stylelint": "^13.6.1",
-    "stylelint-config-airbnb": "^0.0.0",
-    "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.18.0"
+    "prettier": "^2.2.1",
+    "sass": "^1.32.7",
+    "stylelint": "^13.10.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-twbs-bootstrap": "^2.1.0",
+    "stylelint-prettier": "^1.1.2",
+    "typescript": "^4.1.5"
   }
 }

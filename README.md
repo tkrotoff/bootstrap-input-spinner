@@ -3,17 +3,16 @@
 [![npm version](https://badge.fury.io/js/%40tkrotoff%2Fbootstrap-input-spinner.svg)](https://www.npmjs.com/package/@tkrotoff/bootstrap-input-spinner)
 [![Node.js CI](https://github.com/tkrotoff/bootstrap-input-spinner/workflows/Node.js%20CI/badge.svg?branch=master)](https://github.com/tkrotoff/bootstrap-input-spinner/actions)
 [![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Airbnb Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 
-Bootstrap >= 4.2 spinner/loading/pending indicator for `<input>`
+Bootstrap >= 4.4 spinner/loading/pending indicator for `<input>`
 
 ![demo](doc/demo.gif)
 
 Example: https://codesandbox.io/s/github/tkrotoff/bootstrap-input-spinner/tree/codesandbox.io
 
-- Small: less than 50 lines of [SCSS](src/bootstrap-input-spinner.scss)
+- Small: ~200 lines of [SCSS](src/bootstrap-input-spinner.scss)
 - Works in latest browsers and IE >= 10
-- Uses [Bootstrap variables](https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults): nothing hardcoded
+- Uses [Bootstrap variables](https://getbootstrap.com/docs/4.6/getting-started/theming/#variable-defaults)
 
 ⚠️ Latest implementation for Bootstrap < 4.2 is [bootstrap-spinner v0.0.4](https://github.com/tkrotoff/bootstrap-input-spinner/tree/v0.0.4)
 
@@ -27,12 +26,14 @@ Import [bootstrap-input-spinner.scss](src/bootstrap-input-spinner.scss):
 @import '~@tkrotoff/bootstrap-input-spinner/src/bootstrap-input-spinner';
 ```
 
-Modify your [Bootstrap 4 code](https://getbootstrap.com/docs/4.3/components/forms/) as follow:
+Modify your [Bootstrap 4 code](https://getbootstrap.com/docs/4.6/components/forms/) as follow:
 
 ```HTML
 <div class="form-group">
   <label for="email">Email address</label>
-  <input type="email" id="email" class="form-control is-loading is-loading-sm">
-  <span class="spinner-border spinner-border-sm"></span>
+  <div class="is-loading">
+    <input type="email" id="email" class="form-control">
+    <div class="spinner-border spinner-border-sm"></div>
+  </div>
 </div>
 ```
