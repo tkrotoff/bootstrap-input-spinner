@@ -1,3 +1,32 @@
+## 0.10.0 (2021/02/19)
+
+- Breaking change: full rewrite to support `<textarea>` and `<select>`
+
+  - `is-loading` must be on the input's parent instead of on the input
+  - no more `is-loading-sm`
+
+  ```HTML
+  <!-- Before -->
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" id="email" class="form-control is-loading is-loading-sm">
+    <span class="spinner-border spinner-border-sm"></span>
+  </div>
+
+  <!-- After -->
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <div class="is-loading">
+      <input type="email" id="email" class="form-control">
+      <div class="spinner-border spinner-border-sm"></div>
+    </div>
+  </div>
+  ```
+
+- Way more tests
+- Update npm packages
+- Needs Bootstrap >= 4.4
+
 ## 0.4.1 (2020/08/18)
 
 - Opacify the spinner in a readonly input
