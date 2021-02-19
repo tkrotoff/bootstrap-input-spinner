@@ -14,6 +14,8 @@ Example: https://codesandbox.io/s/github/tkrotoff/bootstrap-input-spinner/tree/c
 - Works in latest browsers and IE >= 10
 - Uses [Bootstrap variables](https://getbootstrap.com/docs/4.6/getting-started/theming/#variable-defaults)
 
+Check the [changelog](CHANGELOG.md) for breaking changes and fixes between releases.
+
 ⚠️ Latest implementation for Bootstrap < 4.2 is [bootstrap-spinner v0.0.4](https://github.com/tkrotoff/bootstrap-input-spinner/tree/v0.0.4)
 
 ## Usage
