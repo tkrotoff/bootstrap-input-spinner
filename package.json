@@ -5,10 +5,10 @@
     "type": "git",
     "url": "https://github.com/tkrotoff/bootstrap-input-spinner.git"
   },
-  "description": "Bootstrap >= 4.4 spinner/loading/pending indicator for <input>",
+  "description": "Bootstrap >= 5 spinner/loading/pending indicator for <input>",
   "license": "MIT",
   "keywords": [
-    "bootstrap4",
+    "bootstrap5",
     "bootstrap",
     "input",
     "loading",
@@ -36,12 +36,12 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "bootstrap": ">=4.4"
+    "bootstrap": ">=5.0.0-beta3"
   },
   "devDependencies": {
     "@tkrotoff/bootstrap-floating-label": "^0.7.0",
     "@types/stylelint": "^9.10.1",
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^5.0.0-beta3",
     "core-js": "^3.10.1",
     "husky": "^6.0.0",
     "parcel-bundler": "^1.12.4",
