@@ -222,7 +222,7 @@ $space-for-spinner-sm: 25px;
 
   ~ .spinner-grow {
     // https://github.com/twbs/bootstrap/blob/v4.6.0/scss/_spinners.scss#L50
-    animation: 0.75s linear infinite spinner-grow-disabled;
+    animation-name: spinner-grow-disabled;
   }
 }
 
