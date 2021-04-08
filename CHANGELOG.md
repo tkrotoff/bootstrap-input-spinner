@@ -1,3 +1,8 @@
+## 0.10.2 (2021/04/08)
+
+- Fix example's debug checkbox under IE
+- Small improvements
+
 ## 0.10.1 (2021/04/08)
 
 - Update npm packages
