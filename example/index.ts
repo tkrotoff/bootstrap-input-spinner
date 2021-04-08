@@ -32,7 +32,7 @@ window.toggleDebugMode = () => {
   spinners.forEach(spinner => spinner.classList.toggle('stop-animation', debugMode));
 
   const inputs = [
-    ...document.getElementsByTagName('input'),
+    ...document.querySelectorAll<HTMLInputElement>('input:not(#debug-mode)'),
     ...document.getElementsByTagName('textarea')
   ];
   inputs.forEach(input => {
