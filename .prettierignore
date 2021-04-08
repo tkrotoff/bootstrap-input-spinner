@@ -1,5 +1,6 @@
 .git/
 .cache/
+.husky/
 dist/
 .gitignore
 .prettierignore
