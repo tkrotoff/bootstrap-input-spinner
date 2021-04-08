@@ -214,7 +214,7 @@ $space-for-spinner-sm: 25px;
 .form-control:disabled,
 .form-control[readonly],
 // [<select> cannot be readonly](https://stackoverflow.com/a/54955886)
-// :read-only is not supported by IE 11 https://stackoverflow.com/q/9635293
+// [:read-only is not supported by IE 11](https://stackoverflow.com/a/42864461)
 .custom-select:disabled {
   ~ .spinner-border {
     opacity: $btn-disabled-opacity;
