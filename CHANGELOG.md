@@ -1,3 +1,7 @@
+## 0.10.1 (2021/04/08)
+
+- Update npm packages
+
 ## 0.10.0 (2021/02/19)
 
 - Breaking change: full rewrite to support `<textarea>` and `<select>`
