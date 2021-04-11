@@ -39,7 +39,7 @@
     "bootstrap": ">=5.0.0-beta3"
   },
   "devDependencies": {
-    "@tkrotoff/bootstrap-floating-label": "^0.7.0",
+    "@tkrotoff/bootstrap-floating-label": "^0.10.0",
     "@types/stylelint": "^9.10.1",
     "bootstrap": "^5.0.0-beta3",
     "core-js": "^3.10.1",
