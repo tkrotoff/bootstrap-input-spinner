@@ -65,6 +65,8 @@ $spinner-regular-end-position: $is-valid-icon-end-position;
 // 38px
 $spinner-form-select-end-position: calc(#{$form-select-indicator-padding} + 2px);
 
+$spinner-form-select-multiple-end-position: calc(#{$form-select-indicator-padding} - 10px);
+
 .is-loading {
   position: relative;
 
@@ -72,7 +74,8 @@ $spinner-form-select-end-position: calc(#{$form-select-indicator-padding} + 2px)
   > .form-control,
   > .form-control-plaintext,
   > .form-select,
-  > textarea[rows='1'].form-control {
+  // Override https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/forms/_form-select.scss#L37-L38
+  > .form-select[size] {
     // TODO How to make this wider when we have spinner lg?
     // https://developer.mozilla.org/en-US/docs/Web/CSS/:has
     padding-right: $is-valid-padding-end;
@@ -95,22 +98,42 @@ $spinner-form-select-end-position: calc(#{$form-select-indicator-padding} + 2px)
     }
   }
 
-  > textarea.form-control,
-  > select[multiple],
-  > .form-select[multiple] {
-    ~ .spinner-border,
-    ~ .spinner-grow {
-      top: $spinner-sm-regular-top;
-    }
-  }
-
-  > .form-select {
+  // 1 line form-select: o ✓ v
+  > .form-select:not([multiple]):not([size]),
+  > .form-select:not([multiple])[size='1'] {
     // https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/mixins/_forms.scss#L91
     padding-right: $form-select-feedback-icon-padding-end;
 
     ~ .spinner-border,
     ~ .spinner-grow {
+      top: $spinner-lg-regular-top;
       right: $spinner-form-select-end-position;
+
+      &.spinner-border-sm,
+      &.spinner-grow-sm {
+        top: $spinner-sm-regular-top;
+      }
+    }
+  }
+
+  // Multiple lines form-select: o ||
+  > .form-select[multiple],
+  > .form-select[size] {
+    ~ .spinner-border,
+    ~ .spinner-grow {
+      top: $spinner-sm-regular-top;
+      right: $spinner-form-select-multiple-end-position;
+    }
+  }
+  > .form-select[multiple][size='1'] {
+    ~ .spinner-border,
+    ~ .spinner-grow {
+      top: $spinner-lg-regular-top;
+
+      &.spinner-border-sm,
+      &.spinner-grow-sm {
+        top: $spinner-sm-regular-top;
+      }
     }
   }
 
@@ -162,31 +185,17 @@ $space-for-spinner-sm: 31px;
       }
     }
 
-    > textarea.form-control {
-      @include form-validation-state-selector($state) {
-        ~ .spinner-border,
-        ~ .spinner-grow {
-          top: $spinner-lg-regular-top;
-
-          &.spinner-border-sm,
-          &.spinner-grow-sm {
-            top: $spinner-sm-regular-top;
-          }
-        }
-      }
-    }
-
-    // Bootstrap 4.6.0 does not display a is-valid icon for .custom-select[multiple]
-    // => .form-select:not([multiple])
-    // Bootstrap 5.0.0-beta3 displays a is-valid icon for .form-select[multiple] - is it a bug? I think it is
-    // => .form-select
-    > .form-select/*:not([multiple])*/ {
+    // Bootstrap 5.0.0 does not display a is-valid icon for .form-select[multiple]
+    // FIXME https://github.com/twbs/bootstrap/pull/33598
+    // 1 line form-select: o ✓ v
+    > .form-select:not([multiple]):not([size]),
+    > .form-select:not([multiple])[size='1'] {
       @include form-validation-state-selector($state) {
         padding-right: calc(#{$form-select-feedback-icon-padding-end} + #{$space-for-spinner-sm});
 
         ~ .spinner-border,
         ~ .spinner-grow {
-          // 55px
+          // 69px
           right: calc(
             #{remove-inner-calc-ie-fix(#{$spinner-form-select-end-position})} + #{$space-for-spinner-sm}
           );
