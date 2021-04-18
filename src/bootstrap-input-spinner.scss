@@ -24,23 +24,23 @@
   @return str-replace($innerCalc, 'calc', '');
 }
 
-// https://github.com/twbs/bootstrap/blob/v4.6.0/scss/mixins/_forms.scss#L88
+// https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/mixins/_forms.scss#L62
 // calc(1.5em + 0.75rem)
 // 36px
-$is-valid-padding-right: $input-height-inner;
+$is-valid-padding-end: $input-height-inner;
 
-// https://github.com/twbs/bootstrap/blob/v4.6.0/scss/mixins/_forms.scss#L107
+// https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/mixins/_forms.scss#L81
 // calc(0.375em + 0.1875rem)
 // 9px
 $textarea-is-valid-top-position: $input-height-inner-quarter;
 
 // form-feedback-icon-valid is 7x6 centered inside a 8x8 viewport
-// https://github.com/twbs/bootstrap/blob/v4.6.0/scss/_variables.scss#L661
+// https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/_variables.scss#L878
 $is-valid-icon-padding-x: 0.5px;
 $is-valid-icon-padding-y: 1px;
 
 // form-feedback-icon-invalid is 10x10 centered inside a 12x12 viewport
-// https://github.com/twbs/bootstrap/blob/v4.6.0/scss/_variables.scss#L663
+// https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/_variables.scss#L880
 $is-invalid-icon-padding-x: 1px;
 $is-invalid-icon-padding-y: 1px;
 
@@ -51,21 +51,21 @@ $spinner-sm-regular-top: calc(
 
 $spinner-lg-regular-top: 3px;
 
-// https://github.com/twbs/bootstrap/blob/v4.6.0/scss/mixins/_forms.scss#L91
+// https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/mixins/_forms.scss#L65
 // calc(0.375em + 0.1875rem)
 // 9px
-$is-valid-icon-right-position: $input-height-inner-quarter;
+$is-valid-icon-end-position: $input-height-inner-quarter;
 
-$spinner-regular-right-position: $is-valid-icon-right-position;
+$spinner-regular-end-position: $is-valid-icon-end-position;
 
-// https://github.com/twbs/bootstrap/blob/v4.6.0/scss/mixins/_forms.scss#L118
-// $custom-select-feedback-icon-position
-// https://github.com/twbs/bootstrap/blob/v4.6.0/scss/_variables.scss#L589
-// 1.75rem
-// 30px
-$spinner-custom-select-right-position: calc(
-  #{$custom-select-padding-x + $custom-select-indicator-padding} + 2px
-);
+// https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/mixins/_forms.scss#L93
+// $form-select-feedback-icon-position
+// https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/_variables.scss#L809
+// 2.25rem
+// 38px
+$spinner-form-select-end-position: calc(#{$form-select-indicator-padding} + 2px);
+
+$spinner-form-select-multiple-end-position: calc(#{$form-select-indicator-padding} - 10px);
 
 .is-loading {
   position: relative;
@@ -73,21 +73,22 @@ $spinner-custom-select-right-position: calc(
   // Regular
   > .form-control,
   > .form-control-plaintext,
-  > .custom-select,
-  > textarea[rows='1'].form-control {
+  > .form-select,
+  // Override https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/forms/_form-select.scss#L37-L38
+  > .form-select[size] {
     // TODO How to make this wider when we have spinner lg?
     // https://developer.mozilla.org/en-US/docs/Web/CSS/:has
-    padding-right: $is-valid-padding-right;
+    padding-right: $is-valid-padding-end;
 
     ~ .spinner-border,
     ~ .spinner-grow {
       position: absolute;
 
       top: $spinner-lg-regular-top;
-      right: $spinner-regular-right-position;
+      right: $spinner-regular-end-position;
 
-      // Should be on top of .input-group > .form-control:focus and .input-group > .custom-select:focus
-      // https://github.com/twbs/bootstrap/blob/v4.6.0/scss/_input-group.scss#L35
+      // Should be on top of .input-group > .form-control:focus and .input-group > .form-select:focus
+      // https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/forms/_input-group.scss#L23
       z-index: 4;
 
       &.spinner-border-sm,
@@ -97,22 +98,42 @@ $spinner-custom-select-right-position: calc(
     }
   }
 
-  > textarea.form-control,
-  > select[multiple],
-  > .custom-select[multiple] {
+  // 1 line form-select: o ✓ v
+  > .form-select:not([multiple]):not([size]),
+  > .form-select:not([multiple])[size='1'] {
+    // https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/mixins/_forms.scss#L91
+    padding-right: $form-select-feedback-icon-padding-end;
+
     ~ .spinner-border,
     ~ .spinner-grow {
-      top: $spinner-sm-regular-top;
+      top: $spinner-lg-regular-top;
+      right: $spinner-form-select-end-position;
+
+      &.spinner-border-sm,
+      &.spinner-grow-sm {
+        top: $spinner-sm-regular-top;
+      }
     }
   }
 
-  > .custom-select {
-    // https://github.com/twbs/bootstrap/blob/v4.6.0/scss/mixins/_forms.scss#L117
-    padding-right: $custom-select-feedback-icon-padding-right;
-
+  // Multiple lines form-select: o ||
+  > .form-select[multiple],
+  > .form-select[size] {
     ~ .spinner-border,
     ~ .spinner-grow {
-      right: $spinner-custom-select-right-position;
+      top: $spinner-sm-regular-top;
+      right: $spinner-form-select-multiple-end-position;
+    }
+  }
+  > .form-select[multiple][size='1'] {
+    ~ .spinner-border,
+    ~ .spinner-grow {
+      top: $spinner-lg-regular-top;
+
+      &.spinner-border-sm,
+      &.spinner-grow-sm {
+        top: $spinner-sm-regular-top;
+      }
     }
   }
 
@@ -143,53 +164,40 @@ $spinner-custom-select-right-position: calc(
   }
 }
 
-$space-for-spinner-sm: 25px;
+$space-for-spinner-sm: 31px;
 
-// Handle <input class="form-control is-valid"> and <select class="custom-select is-valid">
+// Handle <input class="form-control is-valid"> and <select class="form-select is-valid">
 //
-// https://github.com/twbs/bootstrap/blob/v4.6.0/scss/_forms.scss#L262
-// https://github.com/twbs/bootstrap/blob/v4.6.0/scss/mixins/_forms.scss#L83-L84
+// https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/forms/_validation.scss#L9
+// https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/mixins/_forms.scss#L58
 @each $state, $data in $form-validation-states {
   .is-loading {
     > .form-control {
       @include form-validation-state-selector($state) {
         padding-right: calc(
-          #{remove-inner-calc-ie-fix(#{$is-valid-padding-right})} + #{$space-for-spinner-sm}
+          #{remove-inner-calc-ie-fix(#{$is-valid-padding-end})} + #{$space-for-spinner-sm}
         );
 
         ~ .spinner-border,
         ~ .spinner-grow {
-          right: calc(#{remove-inner-calc-ie-fix(#{$spinner-custom-select-right-position})} + 3px);
+          right: $spinner-form-select-end-position;
         }
       }
     }
 
-    > textarea.form-control {
+    // Bootstrap 5.0.0 does not display a is-valid icon for .form-select[multiple]
+    // FIXME https://github.com/twbs/bootstrap/pull/33598
+    // 1 line form-select: o ✓ v
+    > .form-select:not([multiple]):not([size]),
+    > .form-select:not([multiple])[size='1'] {
       @include form-validation-state-selector($state) {
-        ~ .spinner-border,
-        ~ .spinner-grow {
-          top: $spinner-lg-regular-top;
-
-          &.spinner-border-sm,
-          &.spinner-grow-sm {
-            top: $spinner-sm-regular-top;
-          }
-        }
-      }
-    }
-
-    // Why :not? Bootstrap 4.6.0 does not display a is-valid icon for .custom-select[multiple]
-    > .custom-select:not([multiple]) {
-      @include form-validation-state-selector($state) {
-        padding-right: calc(
-          #{$custom-select-feedback-icon-padding-right} + #{$space-for-spinner-sm}
-        );
+        padding-right: calc(#{$form-select-feedback-icon-padding-end} + #{$space-for-spinner-sm});
 
         ~ .spinner-border,
         ~ .spinner-grow {
-          // 55px
+          // 69px
           right: calc(
-            #{remove-inner-calc-ie-fix(#{$spinner-custom-select-right-position})} + #{$space-for-spinner-sm}
+            #{remove-inner-calc-ie-fix(#{$spinner-form-select-end-position})} + #{$space-for-spinner-sm}
           );
         }
       }
@@ -207,26 +215,26 @@ $space-for-spinner-sm: 25px;
   }
 }
 
-// Make the spinner in a disabled/readonly input look like a spinner in a disabled button (https://getbootstrap.com/docs/4.5/components/spinners/#buttons)
+// Make the spinner in a disabled/readonly input look like a spinner in a disabled button (https://getbootstrap.com/docs/5.0/components/spinners/#buttons)
 // Note: is-valid and is-invalid images don't change their opacity when the input is disabled/readonly
 // Note: by default browsers style disabled fields but not readonly fields
-// Bootstrap 4 does style readonly fields: https://getbootstrap.com/docs/4.5/components/forms/#readonly
+// Bootstrap 5 does style readonly fields: https://getbootstrap.com/docs/5.0/forms/form-control/#readonly
 .form-control:disabled,
 .form-control[readonly],
 // [<select> cannot be readonly](https://stackoverflow.com/a/54955886)
 // [:read-only is not supported by IE 11](https://stackoverflow.com/a/42864461)
-.custom-select:disabled {
+.form-select:disabled {
   ~ .spinner-border {
     opacity: $btn-disabled-opacity;
   }
 
   ~ .spinner-grow {
-    // https://github.com/twbs/bootstrap/blob/v4.6.0/scss/_spinners.scss#L50
+    // https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/_spinners.scss#L54
     animation-name: spinner-grow-disabled;
   }
 }
 
-// https://github.com/twbs/bootstrap/blob/v4.6.0/scss/_spinners.scss#L31-L39
+// https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/_spinners.scss#L34-L42
 @keyframes spinner-grow-disabled {
   0% {
     transform: scale(0);
@@ -237,41 +245,10 @@ $space-for-spinner-sm: 25px;
   }
 }
 
-//
-// Bootstrap does ".input-group > .form-control" which is not compatible with our HTML
-// We need ".input-group > div > .form-control" instead :-/
-
-.rounded-right-0 {
-  // https://github.com/twbs/bootstrap/blob/v4.6.0/scss/_input-group.scss#L198
-  @include border-right-radius(0);
+// Override https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/forms/_input-group.scss#L119
+// https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/_spinners.scss#L19
+.spinner-border {
+  @include border-start-radius(50% !important);
 }
 
-.input-group.fix-focus {
-  // Copy-pasted and adapted from https://github.com/twbs/bootstrap/blob/v4.6.0/scss/_input-group.scss#L14-L41
-
-  .form-control,
-  .form-control-plaintext,
-  .custom-select,
-  .custom-file {
-    position: relative; // For focus state's z-index
-  }
-
-  // Bring the "active" form control to the top of surrounding elements
-  .form-control:focus,
-  .custom-select:focus,
-  .custom-file .custom-file-input:focus ~ .custom-file-label {
-    z-index: 3;
-  }
-
-  // Bring the custom file input above the label
-  .custom-file .custom-file-input:focus {
-    z-index: 4;
-  }
-
-  ///
-}
-
-.fix-margin-left {
-  // https://github.com/twbs/bootstrap/blob/v4.6.0/scss/_input-group.scss#L27
-  margin-left: -$input-border-width;
-}
+@import 'input-group';
