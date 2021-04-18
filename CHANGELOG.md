@@ -1,3 +1,9 @@
+## 0.20.0 (2021/04/18)
+
+- Switch from Bootstrap 4 to Bootstrap 5 (5.0.0-beta3)
+- Handle input-group cleanly
+- Better example
+
 ## 0.10.2 (2021/04/08)
 
 - Fix example's debug checkbox under IE
