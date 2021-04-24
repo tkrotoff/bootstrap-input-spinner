@@ -16,8 +16,9 @@ Example: https://codesandbox.io/s/github/tkrotoff/bootstrap-input-spinner/tree/c
 
 Check the [changelog](CHANGELOG.md) for breaking changes and fixes between releases.
 
-⚠️ Latest implementation for Bootstrap >= 4.2 & < 5 is [@tkrotoff/bootstrap-spinner v0.0.4](https://github.com/tkrotoff/bootstrap-input-spinner/tree/v0.0.4)
-⚠️ Latest implementation for Bootstrap < 4.2 is [@tkrotoff/bootstrap-input-spinner v0.10](https://github.com/tkrotoff/bootstrap-input-spinner/tree/v0.10.2)
+⚠️ Latest implementation for Bootstrap >= 4.2 & < 5 is [@tkrotoff/bootstrap-input-spinner v0.10.2](https://github.com/tkrotoff/bootstrap-input-spinner/tree/v0.10.2)
+
+⚠️ Latest implementation for Bootstrap < 4.2 is [@tkrotoff/bootstrap-spinner v0.0.4](https://github.com/tkrotoff/bootstrap-input-spinner/tree/v0.0.4)
 
 ## Usage
 
