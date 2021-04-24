@@ -1,3 +1,7 @@
+## 0.20.1 (2021/04/24)
+
+- Fix links to Bootstrap 4 versions
+
 ## 0.20.0 (2021/04/18)
 
 - Switch from Bootstrap 4 to Bootstrap 5 (5.0.0-beta3)
