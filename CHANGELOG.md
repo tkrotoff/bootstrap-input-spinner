@@ -1,3 +1,8 @@
+## 0.20.2 (2021/05/08)
+
+- Update npm packages
+- Bootstrap 5.0.0 (instead of 5.0.0-beta3)
+
 ## 0.20.1 (2021/04/24)
 
 - Fix links to Bootstrap 4 versions
