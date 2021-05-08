@@ -4,7 +4,7 @@
 [![Node.js CI](https://github.com/tkrotoff/bootstrap-input-spinner/workflows/Node.js%20CI/badge.svg?branch=master)](https://github.com/tkrotoff/bootstrap-input-spinner/actions)
 [![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-Bootstrap >= 5 spinner/loading/pending indicator for `<input>`, `<textarea>` and `<select>`
+Bootstrap 5 spinner/loading/pending indicator for `<input>`, `<textarea>` and `<select>`
 
 ![demo](doc/demo.gif)
 

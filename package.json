@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/tkrotoff/bootstrap-input-spinner.git"
   },
-  "description": "Bootstrap >= 5 spinner/loading/pending indicator for <input>",
+  "description": "Bootstrap 5 spinner/loading/pending indicator for <input>",
   "license": "MIT",
   "keywords": [
     "bootstrap5",
