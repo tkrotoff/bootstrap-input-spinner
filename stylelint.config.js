@@ -13,9 +13,9 @@ const config = {
 
   rules: {
     'selector-no-qualifying-type': null,
-
     // Instead of 4: https://github.com/twbs/stylelint-config-twbs-bootstrap/blob/v2.1.0/css/index.js#L257
-    'selector-max-class': 5
+    'selector-max-class': 5,
+    'no-invalid-position-at-import-rule': null
   }
 };
 
