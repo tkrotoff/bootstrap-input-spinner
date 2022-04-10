@@ -1,3 +1,7 @@
+## 0.20.4 (2021/04/11)
+
+- Update npm packages, switch to Parcel 2
+
 ## 0.20.3 (2021/11/27)
 
 - Update npm packages
