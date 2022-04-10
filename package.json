@@ -1,6 +1,6 @@
 {
   "name": "@tkrotoff/bootstrap-input-spinner",
-  "version": "0.20.3",
+  "version": "0.20.4",
   "description": "Bootstrap 5 spinner/loading/pending indicator for <input>",
   "repository": "github:tkrotoff/bootstrap-input-spinner",
   "license": "MIT",
