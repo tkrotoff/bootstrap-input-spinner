@@ -1,3 +1,7 @@
+## 0.20.5 (2021/04/20)
+
+- [Fix build script by updating @parcel/css](https://github.com/parcel-bundler/parcel-css/issues/148) (+ other npm packages)
+
 ## 0.20.4 (2021/04/11)
 
 - Update npm packages, switch to Parcel 2
