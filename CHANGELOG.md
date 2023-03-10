@@ -1,3 +1,7 @@
+## 0.21.1 (2023/03/11)
+
+- Publish only src/ to npm
+
 ## 0.21.0 (2023/03/11)
 
 - Old browsers not tested anymore: support dropped
