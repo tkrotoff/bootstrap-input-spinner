@@ -76,7 +76,7 @@ $spinner-form-select-multiple-end-position: calc(#{$form-select-indicator-paddin
   > .form-select,
   // Override https://github.com/twbs/bootstrap/blob/v5.0.0-beta3/scss/forms/_form-select.scss#L37-L38
   > .form-select[size] {
-    // TODO How to make this wider when we have spinner lg?
+    // FIXME How to make this wider when we have spinner lg?
     // https://developer.mozilla.org/en-US/docs/Web/CSS/:has
     padding-right: $is-valid-padding-end;
 
@@ -218,7 +218,7 @@ $space-for-spinner-sm: 31px;
 // Make the spinner in a disabled/readonly input look like a spinner in a disabled button (https://getbootstrap.com/docs/5.0/components/spinners/#buttons)
 // Note: is-valid and is-invalid images don't change their opacity when the input is disabled/readonly
 // Note: by default browsers style disabled fields but not readonly fields
-// Bootstrap 5 does style readonly fields: https://getbootstrap.com/docs/5.0/forms/form-control/#readonly
+// FIXME Bootstrap 5 does style readonly fields: https://github.com/twbs/bootstrap/issues/33925
 .form-control:disabled,
 .form-control[readonly],
 // [<select> cannot be readonly](https://stackoverflow.com/a/54955886)
