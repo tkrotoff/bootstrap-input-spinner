@@ -1,3 +1,7 @@
+## 0.21.0 (2023/03/11)
+
+- Old browsers not tested anymore: support dropped
+
 ## 0.20.5 (2021/04/20)
 
 - [Fix build script by updating @parcel/css](https://github.com/parcel-bundler/parcel-css/issues/148) (+ other npm packages)
