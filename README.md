@@ -11,7 +11,7 @@ Bootstrap 5 spinner/loading/pending indicator for `<input>`, `<textarea>` and `<
 Example: https://codesandbox.io/s/github/tkrotoff/bootstrap-input-spinner/tree/codesandbox.io
 
 - Small: ~200 lines of [SCSS](src/bootstrap-input-spinner.scss)
-- Works in latest browsers and IE 11
+- Works with modern browsers
 - Uses [Bootstrap variables](https://getbootstrap.com/docs/5.0/customize/sass/#variable-defaults)
 
 Check the [changelog](CHANGELOG.md) for breaking changes and fixes between releases.

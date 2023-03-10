@@ -1,8 +1,3 @@
-// Support for IE
-// https://github.com/parcel-bundler/parcel/issues/3742
-// https://github.com/parcel-bundler/parcel/issues/3216
-import 'core-js/stable';
-
 import tocbot from 'tocbot';
 
 import './index.scss';
