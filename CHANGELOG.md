@@ -1,3 +1,7 @@
+## 0.21.2 (2023/03/11)
+
+- Update @tkrotoff/bootstrap-floating-label to 0.12.2
+
 ## 0.21.1 (2023/03/11)
 
 - Publish only src/ to npm
